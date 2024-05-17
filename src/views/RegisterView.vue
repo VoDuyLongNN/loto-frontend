@@ -36,8 +36,8 @@
             <input v-model="user.phone" id="phone" type="text" placeholder="Phone" class="w-[500px] rounded-lg border border-gray-400 outline-blue-500  px-4 py-2">
          </div>
 
-         <span v-if="validate.error === false" class="text-red-500 font-semibold text-sm border-2 border-red-500 block px-4 py-4 bg-red-200">{{ validate.message }}</span>
-         <button :disabled="isSubmitting" type="submit" class="text-white mt-6 px-6 py-2 rounded-lg bg-sky-500/100 hover:bg-cyan-600">Register</button>
+         <span v-if="validate.message" class="text-red-500 font-semibold text-sm border-2 border-red-500 block px-4 py-4 bg-red-200">{{ validate.message }}</span>
+         <button :disabled="validate.isSubmitting" type="submit" class="text-white mt-6 px-6 py-2 rounded-lg bg-sky-500/100 hover:bg-cyan-600">Register</button>
          <span class="block pt-4" >You already have an account? <a href="/login" class="text-cyan-700 font-semibold">Login</a></span>
       </form>
 

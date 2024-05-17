@@ -2,8 +2,8 @@
    <div class="flex items-center justify-between px-8 bg-gray-100	h-16 fixed top-0 left-0 right-0">
       <ul class="flex">
          <li ><a href="/" class="pl-0 px-6 text-base hover:text-sky-400/100">Home</a></li>
-         <li ><a href="/register" class="px-6 text-base hover:text-sky-400/100">Register</a></li>
-         <li ><a href="/login" class="px-6 text-base hover:text-sky-400/100">Login</a></li>
+         <li ><a href="/" class="px-6 text-base hover:text-sky-400/100">Game</a></li>
+         <li ><a href="/" class="px-6 text-base hover:text-sky-400/100">About</a></li>
       </ul>
 
       <div class="flex items-center">
