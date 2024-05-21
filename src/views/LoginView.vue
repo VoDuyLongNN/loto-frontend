@@ -51,6 +51,7 @@ export default{
                else{
                   this.user.isLogin = true;
                   Cookie.set('auth', res.data.token, this.changeTime(res.data.expirationTime));
+                  Cookie.set('UserID', res.data.userID, this.changeTime(res.data.expirationTime))
                   this.$router.push('/');   
                }
             });
