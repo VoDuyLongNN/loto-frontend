@@ -2,10 +2,20 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 
 const instance = axios.create({
-  baseURL: 'http://localhost',
+  baseURL: 'http://localhost:8080',
 });
 
-// Set the default headers for authorization
-instance.defaults.headers.common['Authorization'] = `Bearer ${Cookies.get('auth')}`;
+instance.interceptors.request.use(
+  (config) => {
+    const token = Cookies.get('auth');
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 export default instance;
